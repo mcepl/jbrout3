@@ -199,13 +199,11 @@ def main():
     except:
         pass
 
-    #~ api.init(os.path.expanduser("~/.local/share/jbrout"))  #copy of the original jbrout
-    #~ index(log=False)
-    #~ quit()
+    api.init(os.path.expanduser("~/.local/share/jbrout"))  #copy of the original jbrout
+    index(log=True)
 
-    api.init("./tempconf")
-    index(log=True) #log to False, speedify a lot ;-), but when debugguing, it's hard ;-)
-    #~ index(log=False) #log to False, speedify a lot ;-), but when debugguing, it's hard ;-)
+    ## api.init("./tempconf")
+    ## index(log=False) #log to False, speedify a lot ;-), but when debugguing, it's hard ;-)
     api.save()
 
 if __name__=="__main__":
